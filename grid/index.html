@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #garden {
+      display: grid;
+      height: 600px;
+      width: 600px;
+      grid-template-columns: 20% 20% 20% 20% 20%;  /* 列 */
+      grid-template-rows: 20% 20% 20% 20% 20%; /* 行 */
+    }
+
+    .water {
+      background-color: skyblue;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+
+    .water1 {
+      /* 相对 */
+      background-color: skyblue;
+      grid-column-start: 2;
+      grid-column-end: span 3;
+    }
+    
+    .water2 {
+      background-color: skyblue;
+      grid-column: 4 / 6;
+    }
+
+    .water3 {
+      background-color: skyblue;
+      grid-column: 2 / span 3;
+    }
+
+    .water4 {
+      background-color: skyblue;
+      grid-row: 3 / 6;
+    }
+
+    .water5 {
+      background-color: skyblue;
+      grid-row: 1 / 6;
+      grid-column: 2 / 6;
+    }
+
+    .water6 {
+      background-color: skyblue;
+      grid-area: 1 / 2 / 4 / 6; /* grid-column-start grid-row-start grid-column-end grid-row-end */
+    }
+  </style>
+</head>
+<body>
+  <div id="garden">
+    <!-- <div class="water"></div> -->
+    <!-- <div class="water1"></div> -->
+    <!-- <div class="water2"></div> -->
+    <!-- <div class="water3"></div> -->
+
+    <!-- <div class="water4"></div> -->
+    <!-- <div class="water5"></div> -->
+    <div class="water6"></div>
+  </div>
+</body>
+</html>
