@@ -1,0 +1,133 @@
+<style type="text/css">
+  body {
+      margin: 0;
+  }
+  .line-box {
+      padding: 0 80px;
+      background: #ff0;
+  }
+  .x {
+      background: #6ade91;
+  }
+  .rect {
+      display: inline-block;
+      width: 100px;
+      margin: 0 20px;
+      background: #6ade91;
+      overflow: hidden;
+  }
+  .top {
+      height: 300px;
+      vertical-align: top;
+  }
+  .bottom {
+      height: 100px;
+      vertical-align: bottom;
+  }
+  .text-top {
+      height: 200px;
+      vertical-align: text-top;
+  }
+  .text-bottom {
+      height: 400px;
+      vertical-align: text-bottom;
+  }
+  .middle {
+      height: 100px;
+      vertical-align: middle;
+  }
+  .baseline {
+      height: 200px;
+      vertical-align: baseline;
+  }
+  .visible {
+      height: 200px;
+      background: #f00;
+      vertical-align: baseline;
+      overflow: visible;
+  }
+</style>
+
+<div class="line-box">
+  <span class="x">x</span>
+  <span class="rect top">top</span>
+  <span class="x">x</span>
+  <span class="rect bottom">bottom</span>
+  <span class="x">x</span>
+  <span class="rect text-top">text-top</span>
+  <span class="x">x</span>
+  <span class="rect text-bottom">text-bottom</span>
+  <span class="x">x</span>
+  <span class="rect middle">middle</span>
+  <span class="x">x</span>
+  <span class="rect baseline">baseline</span>
+  <span class="x">x</span>
+  <span class="rect visible">
+      <span>baseline</span>
+      <span>visible</span>
+  </span>
+  <span class="x">x</span>
+</div>
+
+<!-- <style type="text/css">
+  body {
+      margin: 0;
+  }
+  .box {
+      height: 500px;
+      padding-left: 400px;
+      background: skyblue;
+  }
+  .box img {
+      width: 200px;
+      vertical-align: middle;
+  }
+  .box .blank {
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+    background: #f00;
+    vertical-align: middle;
+  }
+</style>
+
+  <div class="box">
+    <span>x</span>
+    <img src="http://a4.att.hudong.com/21/09/01200000026352136359091694357.jpg">
+    <span class="blank"></span>
+  </div> -->
+
+  <style type="text/css">
+    body {
+        margin: 0;
+    }
+    .box {
+        height: 500px;
+        line-height: 500px;
+        padding-left: 400px;
+        background: skyblue;
+    }
+    .box img {
+        width: 200px;
+        vertical-align: middle;
+    }
+  </style>
+  
+    <div class="box">
+      <span style="background: red; display: inline-block;">头像</span>
+      <img src="http://a4.att.hudong.com/21/09/01200000026352136359091694357.jpg">
+    </div>
+
+<ul>
+  <li>文本</li>  
+  <li></li>
+</ul>
+<style>
+  li {
+    font-size: 20px;
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    border: 1px solid #ccc;
+  }
+</style>

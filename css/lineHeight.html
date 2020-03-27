@@ -1,0 +1,129 @@
+<div class="box">
+  <img src="http://a4.att.hudong.com/21/09/01200000026352136359091694357.jpg">
+  x
+</div>
+
+<style>
+  .box {
+    width: 300px;
+    border: 1px solid #ddd;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+</style>
+
+<div class="box2">
+  <span class="son"></span>
+  x
+</div>
+<style>
+  .box2 {
+    margin-top: 24px;
+    width: 300px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 36px;
+    border: 1px solid #ddd;
+    position: relative;
+  }
+  .box2::after  {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    left: 0; 
+    }  
+  .son {
+     display: inline-block;
+     width: 100px;
+     height: 100px;
+     vertical-align: middle;
+     background-color: purple;
+     position: relative;
+  }
+  .son::after  {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #317ffd;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    left: 0;  
+  }
+</style>
+<ul>
+  <li class="text-container" style="">
+    <span>我是单行文本我是单行文本</span>
+  </li>
+  <li class="text-container">
+    <span>我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本我是多行文本</span>
+    </li>
+  </ul>
+<style>
+  .text-container {
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .text-container:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 90%;
+    max-height: 100px;
+    overflow: hidden;
+  }
+</style>
+
+<dl class="container">
+  <dt><img src="http://a4.att.hudong.com/21/09/01200000026352136359091694357.jpg"/></dt>
+  <dt><img src="http://a4.att.hudong.com/21/09/01200000026352136359091694357.jpg"/></dt>
+  <dt><img src="http://a4.att.hudong.com/21/09/01200000026352136359091694357.jpg"/></dt>
+  <dt><img src="http://a4.att.hudong.com/21/09/01200000026352136359091694357.jpg"/></dt>
+  <dt><i class="justify-fix"></i></dt>
+  <dt><i class="justify-fix"></i></dt>
+  <dt><i class="justify-fix"></i></dt>
+  xxx
+</dl>
+  <style>
+  .container {
+    text-align: justify;
+    width: 400px;
+    margin: 50px  auto;
+    border:  1px solid #ddd;
+    line-height: 0;
+    }
+  dt {
+    list-style: none;
+    display: inline-block;
+    width: 100px;
+  }
+  .container img {
+    width:100px;
+    height:100px;
+  }
+  .justify-fix {
+    display: inline-block; 
+    width: 100px;
+    outline: 1px dashed #317ffd;
+    /* vertical-align: middle; */
+  }
+  </style>
+  
+  
