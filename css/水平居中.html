@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    span {
+      display: inline-block;
+      width: 400px;
+      background: red
+    }
+
+    .block {
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      margin: 0 auto;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+    }
+    .flex-center {
+      width: 300px;
+      height: 50px;
+      background: lightgreen;
+    }
+
+    .transform {
+      height: 200px;
+      position: relative;
+    }
+    .transform-center {
+      position: absolute;
+      width: 300px;
+      left: 50%;
+      height: 100%;
+      transform: translate(-50%, 0);
+      background:steelblue;
+    }
+
+    .pos-margin {
+      height: 200px;
+      position: relative;
+    }
+
+    .pos-margin-center {
+      position: absolute;
+      left: 50%;
+      height: 100%;
+      width: 300px;
+      margin-left: -150px;
+      background-color: greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <h2>水平居中</h2>
+  <span style="text-align: center">行内水平居中</span>
+  <div class="block">块级水平居中</div>
+  <div class="flex">
+    <div class="flex-center">flex水平居中</div>
+  </div>
+  <div class="transform">
+    <div class="transform-center">transform水平居中</div>
+  </div>
+  <div class="pos-margin">
+    <div class="pos-margin-center">使用绝对定位和margin-left（元素定宽）</div>
+  </div>
+</body>
+</html>

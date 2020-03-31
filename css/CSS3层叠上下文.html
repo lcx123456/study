@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    span{
+      position: relative;
+      background: lightgreen;
+      color: white;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background: cyan;
+      /* margin-top: -20px; */
+      transform: translate(0, -10px);
+    }
+    
+    .one {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      position: relative;
+      z-index: 2;
+    }
+
+    .two {
+      width: 50px;
+      height: 50px;
+      background: skyblue;
+      z-index: 6;
+    }
+    .three {
+      position: absolute;
+      z-index: 5;
+      width: 25px;
+      height: 25px;
+      background: red;
+      top: 0;
+      left: 0;
+    }
+    .five {
+      background: slateblue;
+      width: 25px;
+      height: 25px;
+    }
+    .four {
+      position: absolute;
+      z-index: 1;
+      margin-top: -20px;
+      width: 80px;
+      height: 80px;
+      background: yellow;
+    }
+    .six {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 50px;
+      height: 50px;
+      background: black;
+    }
+  </style>
+</head>
+<body>
+  <h3>CSS3新增层叠上下文 后来居上</h3>
+  <span>Im span!</span>  
+  <div class="box"></div>
+
+  <p>one (three two) > four (five six)</p>
+  <p>three > two > one</p>
+  <p>five > six > four</p>
+  <p>three > two > one > five > six > four</p>
+  <div class="one">
+    <div class="two"></div>
+    <div class="three"></div>
+  </div>
+  <div class="four">
+    <div class="five"></div>
+    <div class="six"></div>
+  </div>
+  
+</body>
+</html>
