@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <p>防抖：触发高频事件后n秒内函只会执行一次，如果n秒内高频事件再次被触发，则重新计算</p>
+  <div id="app" style="height: 70px; width: 240px; background: red">
+    <div>window 的 resize、scroll</div>
+    <div>mousedown、mousemove</div>
+    <div>keyup、keydown</div>
+  </div>
+  <button></button>
+
+  <script>
+    // 1、随你怎么移动，在n秒只触发一次 n秒之类再触发 则重新计算
+    // 2、this绑定
+    // 3、arguments
+    function debounce (fn, wait) {
+      let timer
+      
+      return function () {
+        const context = this
+        const args = arguments
+
+        if (timer) {
+          clearTimeout(timer)
+        }
+
+        timer = setTimeout(function() {
+          fn.apply(context, args)
+        }, wait)
+      }
+    }
+    /**
+    * 4.这个时候，代码已经很是完善了，但是为了让这个函数更加完善，我们接下来思考一个新的需求。
+    * 这个需求就是： 我不希望非要等到事件停止触发后才执行，我希望立刻执行函数，然后等到停止触发n 秒后，才可以重新触发执行。防抖事件间隔内不重复触发* 的需求 想想这个需求也是很有道理的嘛，那我们加个 immediate 参数判断是否是立刻执行。
+    */
+    // function debounce (fn, wait, immediate) {
+    //   let timer, result
+
+    //   let debounced = function (...args) {
+    //     timer && clearTimeout(timer)
+
+    //     if (immediate) {
+    //       // 如果已经执行过，不再执行
+    //       const flag = !timer
+    //       timeout = setTimeout(() => {
+    //         timeout = null
+    //       }, wait)
+
+    //       if (flag) result = fn.apply(this, args)
+    //     } else {
+    //       timer = setTimeout(() => {
+    //         fn.apply(this, args)
+    //       }, wait)
+    //     }
+
+    //     return result
+    //   }
+
+    //   debounced.cancel = function  () {
+    //     clearTimeout(timer)
+    //     timer = null
+    //   }
+
+    //   return debounced
+    // }
+
+    let el = document.getElementById('app')
+
+    el.onmouseover = debounce(function (e) {
+      console.log('onmouseover', e)
+    }, 300)
+
+
+  </script>
+</body>
+</html>

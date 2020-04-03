@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="box"></div>
+
+    <style>
+      .box{width: 100vw;height: 100vw;background: #F2DEDE;}
+    </style>
+
+  <div class="box2"></div>
+
+    <style>
+        .box2{
+            width: 100%;
+
+            background: red;
+            padding-bottom: 100%;/* padding百分比相对父元素宽度计算 */
+            height: 0;
+        }
+    </style>    
+
+<div class="box3"></div>
+
+<style>
+    .box3 {width: 100%;overflow:hidden; background: #F2DEDE;}
+    .box3::after {content: "";display: block;margin-top: 100%;}
+</style>
+
+
+<div class="box4"></div>
+
+<style>
+    .box4 {width: 100%;background: red;}
+    .box4::after {content: "";display: block;padding-top: 100%;}
+</style>
+</body>
+</html>
